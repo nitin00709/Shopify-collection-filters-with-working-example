@@ -1,0 +1,90 @@
+/* The container */
+.checkcontainer {
+  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Hide the browser's default checkbox */
+.checkcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  background-color: #eeeeee;
+  height: 15px;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 15px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkcontainer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkcontainer.active-filter input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkcontainer.active-filter input:checked ~ .checkmark::after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkcontainer .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.filter-sidebar .sbf-title {
+  border-bottom: 1px solid;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.sb-filter .advanced-filters {
+  max-height: 220px;
+  overflow: auto;
+}
+.sb-widget.filter-sidebar.no-sidebar.dropdown {
+  padding: 0 20px 0 0;
+}
+.coll_prodbar .grid--view-items {
+  border-left: 1px solid #000;
+  margin: 0;
+  padding-left: 20px;
+}
+.checkcontainer.active-filter.advanced-filter.rt > a {
+  font-weight: 600;
+}
