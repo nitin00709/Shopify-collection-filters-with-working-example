@@ -1,0 +1,87 @@
+{% schema %}
+{
+  "name": "Collection pages",
+  "settings": [    
+    {
+      "type": "checkbox",
+      "id": "tags_enable",
+      "label": "Enable tag filtering",
+      "default": true
+    },
+  	  {
+       "type": "select",
+       "id": "product_sb_placement",
+       "label": "Position",
+       "options": [
+         {
+           "value": "left",
+           "label": "Left"
+         },
+         {
+           "value": "right",
+           "label": "Right"
+         },
+         {
+           "value": "none",
+           "label": "None"
+         }
+       ]
+     },
+  	 {
+       "type": "header",
+       "content": "Filter",
+       "info": "To setup Filter by Groups like our demo, please add product's tag to format 'Group'_'Value'. For example: Color_Black, Brand_Elle"
+     },
+     {
+       "type": "checkbox",
+       "id": "and_logic",
+       "label": "Disable 'AND' operator in a group filter",
+       "default": true
+     },
+     {
+       "type": "radio",
+       "id": "sb_filters_style",
+        "label": "Filter style",
+       "options": [
+         {
+           "value": "toggle",
+           "label": "Toggle"
+         },
+         {
+           "value": "dropdown",
+           "label": "Dropdown"
+         }
+       ],
+        "default": "dropdown",
+        "info": "Only for Sidebar Placement is None"
+     },
+     {
+       "type": "radio",
+       "id": "sb_filters",
+        "label": "Filter type",
+       "options": [
+         {
+           "value": "tags",
+           "label": "Filter by Tags"
+         },
+         {
+           "value": "groups",
+           "label": "Filter by Groups"
+         },
+         {
+           "value": "none",
+           "label": "None"
+         }
+       ],
+        "default": "groups"
+     },
+     {
+       "type": "text",
+       "id": "group_filter_prefix",
+       "label": "Group use in filter",
+       "default": "brand,color,price,size",
+       "info": "Enter your tag's prefix,separate by comma ie: color,size,brand,price.."
+     }
+  ]
+}
+{% endschema %}
